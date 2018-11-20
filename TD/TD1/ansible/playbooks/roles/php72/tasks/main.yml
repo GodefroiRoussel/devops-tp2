@@ -1,0 +1,16 @@
+---
+- name: Install php72
+  yum: 
+    name: php72 
+    state: present
+
+- name: Install php72-fpm
+  yum: 
+    name: php72-fpm 
+    state: present
+
+- name: Copy php72-fpm configuration
+  template: 
+    src: default.conf 
+    dest: /etc/php-fpm.d/www.conf
+  notify: start php

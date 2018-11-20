@@ -1,0 +1,11 @@
+---
+- name: Install nginx
+  yum: 
+    name: nginx 
+    state: present
+
+- name: Copy nginx configuration for php
+  template: 
+    src: default.conf 
+    dest: /etc/nginx/nginx.conf
+  notify: restart nginx

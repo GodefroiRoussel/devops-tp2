@@ -1,0 +1,2 @@
+[tp2-nginx]
+34.241.38.243 ansible_ssh_private_key_file=~/godefroi.pem ansible_user=ec2-user
